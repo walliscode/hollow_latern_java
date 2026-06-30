@@ -11,4 +11,4 @@ plugins {
 }
 
 rootProject.name = "hollow_latern_java"
-include("src")
+include("app")
