@@ -27,6 +27,7 @@ dependencies {
 
     // This dependency is used by the application.
     implementation(libs.guava)
+    implementation(libs.joml)
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -37,5 +38,5 @@ java {
 }
 
 application {
-    mainClass.set("hollow_lantern.App")
+    mainClass.set("hollow_lantern.HollowLantern")
 }
