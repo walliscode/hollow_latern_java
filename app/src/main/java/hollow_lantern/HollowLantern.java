@@ -6,7 +6,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class App extends Application {
+public class HollowLantern extends Application {
 
   @Override
   public void start(Stage stage) {
