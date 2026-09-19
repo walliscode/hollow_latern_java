@@ -15,7 +15,6 @@ repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
 }
-
 javafx {
     version = "26.0.1"
     modules = listOf("javafx.controls")
@@ -24,10 +23,24 @@ javafx {
 dependencies {
     // Use JUnit test framework.
     testImplementation(libs.junit)
-
+    testRuntimeOnly(libs.junit.launcher)
     // This dependency is used by the application.
     implementation(libs.guava)
     implementation(libs.joml)
+}
+
+tasks.test {
+    useJUnitPlatform()
+    testLogging {
+        events("passed", "failed", "skipped")
+
+        exceptionFormat = org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
+
+        showExceptions = true
+        showCauses = true
+        showStackTraces = true
+        showStandardStreams = true
+    }
 }
 
 // Apply a specific Java toolchain to ease working on different environments.

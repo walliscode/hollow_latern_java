@@ -19,7 +19,7 @@ public class VoxelArray {
    * representing the depth. The size of the array is determined by the product of
    * the width, height, and depth of the voxel space.
    */
-  private Color[] voxels;
+  private final Color[] voxels;
 
   /**
    * Constructor for the VoxelArray class. Initializes the flat array of voxels
